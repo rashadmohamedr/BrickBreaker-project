@@ -8,10 +8,12 @@ class paddle:public drawable
 {
 private:
 	point paddlePlace;
+	int dir;
+	int step;
 public:
 	paddle(int, int, game* );
 	void draw() const;
-//	bool windowCollision();
-//	void movePaddle();
+	bool windowCollision();
+	void movePaddle();
 };
 
