@@ -3,11 +3,15 @@
 #include "game.h"
 #include "collidable.h"
 #include "drawable.h"
-class Paddle :public collidable
+
+class paddle:public drawable
 {
+private:
+	point paddlePlace;
 public:
-	Paddle(point r_uprleft, int r_width, int r_height, game* r_pGame);
+	paddle(int, int, game* );
 	void draw() const;
-//	void move();
+//	bool windowCollision();
+//	void movePaddle();
 };
 

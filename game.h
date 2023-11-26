@@ -23,7 +23,7 @@ class game
 	window* pWind;	//Pointer to the CMU graphics window
 	toolbar* gameToolbar;
 	grid* bricksGrid;
-	Paddle* paddle;
+
 
 public:
 	game();
