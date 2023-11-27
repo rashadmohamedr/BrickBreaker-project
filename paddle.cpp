@@ -8,8 +8,8 @@ paddle::paddle(int r_width, int r_height, game* r_pGame):drawable(paddlePlace, r
 }
 void paddle::draw() const {
 	window* pwind = pGame->getWind();
-	pwind->SetPen(RED);
-	pwind->SetBrush(RED);
+	pwind->SetPen(BLACK);
+	pwind->SetBrush(BLACK);
 	cout << config.paddleWidth << " " << paddlePlace.x << " " << paddlePlace.y << " " << paddlePlace.x + 150 << " " << paddlePlace.y + 40;
 	pwind->DrawRectangle(paddlePlace.x, paddlePlace.y, paddlePlace.x + 200, paddlePlace.y + 40);
 }
@@ -23,7 +23,7 @@ bool paddle::windowCollision()
 
 void paddle::movePaddle()
 {
-	if (windowCollision) {
+	if (windowCollision()) {
 		//move as you wish
 		paddlePlace.x += dir * step;
 	}
